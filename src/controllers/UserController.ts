@@ -20,7 +20,7 @@ class UserController {
            name, email
       })
       await userRepository.save(user);
-      return response.json(user);
+      return response.status(201).json(user);
     }
 }
 

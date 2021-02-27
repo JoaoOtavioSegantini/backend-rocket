@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "set NODE_ENV=test&&npm jest",
+    "test": "NODE_ENV=test jest",
     "dev": "ts-node-dev --transpile-only --ignore-watch node_modules src/server",
     "typeorm": "ts-node-dev node_modules/typeorm/cli.js"
   },
