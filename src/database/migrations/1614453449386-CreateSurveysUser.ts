@@ -31,6 +31,24 @@ export class CreateSurveysUser1614453449386 implements MigrationInterface {
                         type: "timeStamp",
                         default: "now()"
                     }
+                ],
+                foreignKeys: [
+                    {
+                        name: "FKUser",
+                        referencedTableName: "users",
+                        referencedColumnNames: ["id"],
+                        columnNames: ["user_id"],
+                        onDelete: "CASCADE",
+                        onUpdate: "CASCADE"
+                    },
+                    {
+                        name: "FKSurvey",
+                        referencedTableName: "surveys",
+                        referencedColumnNames: ["id"],
+                        columnNames: ["survey_id"],
+                        onDelete: "CASCADE",
+                        onUpdate: "CASCADE"
+                    }
                 ]
             })
         )
